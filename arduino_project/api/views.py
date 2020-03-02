@@ -39,6 +39,13 @@ class HomeView(TemplateView):
         context["alerts_count"] = alerts_count
         return context
 
+class AboutView(TemplateView):
+    template_name = 'about.html'
+
+    def get_context_data(self, **kwargs):
+        context = super(AboutView, self).get_context_data(**kwargs)
+        return context
+
 class AlertsView(APIView):
     """
     Provides a get method handler.

@@ -6,6 +6,7 @@ from django.views.generic import TemplateView
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
+from .send_email import notify_user
 from .models import Alerts, Users
 from .serializers import AlertsSerializer
 
@@ -72,4 +73,5 @@ class AlertsView(APIView):
 
         if serializer.is_valid(raise_exception=True):
             alert_saved = serializer.save()
+            notify_user(username, user.address)
         return Response({"success": "Alert for {} created successfully".format(username)})

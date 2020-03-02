@@ -1,2 +1,4 @@
 virtualenv/*
+arduino_project/api/__pycache__/*
 arduino_project/__pycache__/*
+arduino_project/api/config.py

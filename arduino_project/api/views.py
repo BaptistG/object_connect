@@ -9,6 +9,7 @@ from rest_framework.views import APIView
 from .models import Alerts, Users
 from .serializers import AlertsSerializer
 
+
 class HomeView(TemplateView):
     template_name = 'index.html'
 
@@ -59,7 +60,7 @@ class AlertsView(APIView):
             'user_id': user.id
         }
 
-        # Create an article from the above data
+        # Create an alert from the above data
         serializer = AlertsSerializer(data=data)
 
         if serializer.is_valid(raise_exception=True):

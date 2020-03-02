@@ -1,0 +1,38 @@
+h1 {
+  color : #c1824d;
+  text-align: center;
+  margin: 20px 20px 20px 20px;
+}
+table.center {
+   margin-left:auto;
+   margin-right:auto;
+   margin-top: 10%;
+ }
+
+table, tr, th, tr,td {
+  border : 2px solid black ;
+
+}
+header{
+  background-color: #fae5d3;
+}
+body {
+
+  background-color: #fae5d3;
+
+}
+div {
+  display:block;
+}
+.column {
+  float: left;
+  width: 40%;
+  padding: 5px;
+}
+
+/* Clear floats after image containers */
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}

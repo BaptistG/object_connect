@@ -1,5 +1,7 @@
 <html>
+{% load static %}
 <head>
+  <link rel="stylesheet" href="{% static "styles.css" %}">
   {% block title %}<title> Alertes recues </title>{% endblock %}
 
 <meta name="users" content={{ alerts_users }}>
@@ -20,8 +22,10 @@
 </script>
 
 </head>
+<header>
+  <h1> Outil de management d'alertes pour vieux </h1>
+</header>
 
-<body>
 
 <!-- {% block content %}
   <h1> Alerts recues </h1>
@@ -36,17 +40,25 @@
 </table>
 {% endblock %} -->
 
-</head>
   <body>
-    <table>
-    <thead>
-      <tr>
-        <th>Utilisateur</th>
-        <th>Nombre d'alertes</th>
-      </tr>
-    </thead>
-    <tbody id="TheBody">
-    </tbody>
-  </table>
+    <div class="row">
+ <div class="column">
+   <img src="{% static "grandparents.png" %}" alt="Grand Parents">
+ </div>
+ <div class="column">
+   <table class="center">
+   <thead>
+     <tr>
+       <th>Utilisateur</th>
+       <th>Nombre d'alertes</th>
+     </tr>
+   </thead>
+   <tbody id="TheBody">
+   </tbody>
+ </table>
+ </div>
+</div>
+
+
 </body>
 </html>

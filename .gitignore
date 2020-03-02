@@ -1,1 +1,2 @@
 virtualenv/*
+arduino_project/__pycache__/*
